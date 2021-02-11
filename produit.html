@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/produit.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,100&display=swap"
+        rel="stylesheet">
+    <title>Fiche produit</title>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="col-12 text-right">
+                <p><a href="adrien.rajerinera@gmail.com">Contactez nous please!</a></p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar bg-dark navbar-dark navbar-expand-lg">
+        <div class="container">
+            <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="image de la marque" title="logo"></a>
+
+
+            <button class="navbar_toggler" type="button" data-taget="#navbar-expand-sm">
+                Menu</button>
+            <div class="collapse navbar-collapse" class="navbar-expand-sm">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Return in Home</a></li>
+                    <li class="nav-item"><a href="confirm.html" class="nav-link">Votre panier<span> 0 </span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="col-12 text-center mt-5">
+        <h1 class="text-dark pt-4">Teddies Stuff</h1>
+        <div class="border-top border-primary w-25 mx-auto my-3"></div>
+        <p class="lead">Faîtes votre choix parmis nos diverses marques</p>
+    </div>
+
+    <main id="main">
+    <img id="imgProduct">
+    <div id="nameProduct"></div>
+    <div id="descriptionProduct"></div>
+    <div id="priceProduct"></div>
+    <select id="selectColor"></select>
+    <select id="selectQuantite"></select>
+    <button id="panier" type="button">Selectionner ce produit </button>
+    </main>
+
+   
+
+
+
+
+<script src="js/ajax.js"></script>
+<script src="js/produit.js"></script>
+</body>
+</html>

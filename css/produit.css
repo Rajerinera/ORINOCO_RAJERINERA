@@ -1,0 +1,29 @@
+
+main{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#imgProduct{
+    height: 80rem;
+    width: 60rem;
+}
+
+
+#panierTotal{
+    border: 1px solid;
+    margin-bottom : 80px;
+    margin-left: 20px; 
+}
+
+#table{
+    padding: 20px;
+    margin: auto;
+    border: 1px solid;
+
+}
+
+
+#totalCart{
+    border: 1px solid;
+}

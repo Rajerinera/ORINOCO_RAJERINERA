@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/orinoco.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,100&display=swap"
+        rel="stylesheet">
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="col-12 text-right">
+                <p><a href="adrien.rajerinera@gmail.com">Contactez nous please!</a></p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar bg-dark navbar-dark navbar-expand-lg">
+        <div class="container">
+            <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="image de la marque" title="logo"></a>
+
+
+            <button class="navbar_toggler" type="button" data-taget="#navbar-expand-sm">
+                Menu</button>
+            <div class="collapse navbar-collapse" class="navbar-expand-sm">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Return in Home</a></li>
+                    <li class="nav-item"><a href="confirm.html" class="nav-link">Votre panier</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div id="confirmPage">
+   <table id="table"> Votre Panier </table>
+   <button id="button"> Tout supprimer </button>
+   <button id="buttonConfirm">Confirmer votre achat</button>
+
+
+    <form id="order_form" name="order_form">
+        <h1>Formulaire d'inscription</h1>
+        <p>
+            <label for="firstName"> Votre Nom</label> :
+            <input type="text"  id="firstName" required>
+        </p>
+        <p>
+            <label for="lastName"> Votre Prénom</label> :
+            <input type="text"  id="lastName" required>
+        </p>
+        <p>
+            <label for="email"> Votre Email</label> :
+            <input type="email"  id="email" required>
+        </p>
+        <p>
+            <label for="city"> Votre Ville</label> :
+            <input type="text" id="city" required>
+        </p>
+        <p>
+            <label for="address"> Votre Adresse</label> :
+            <input type="text" id="address" required>
+        </p>
+       
+
+        <input id="envoi" type="submit" value="Envoyer">
+        <input id="annuler" type="reset" value="Annuler">
+        
+    </form>
+</div>  
+
+    <script src="js/ajax.js"></script>
+    <script src="js/panier.js"></script>
+    <script src="js/confirm.js"></script>
+
+</body>
+</html>
