@@ -63,27 +63,13 @@ checkCart = () => {
 
 
 // Envoyer les données dans le serveur 
-const ajaxPost = () => {
-    return new Promise(function (resolve, reject) {
-        let form = new XMLHttpRequest();
-        form.addEventListener("load", function () {
-            if (form.status >= 200 && form.status < 300) {
-                sessionStorage.setItem("orderP5", form.responseText)
-                let resultForm = JSON.parse(form.responseText);
-                console.log(resultForm)
-                resolve(resultForm.orderId);
+function sendForm(){
+ajaxPost("http://localhost:3000/api/teddies/order")
+    .then(function (orderId) {
 
-            } else {
-                console.log("requête erreur: " + form.status)
-                reject("error")
-            }
-        })
-        form.open("POST", "http://localhost:3000/api/teddies/order");
-        form.setRequestHeader("content-type", "application/json")
-        const orderJSON = JSON.stringify(order)
-        form.send(orderJSON)
-    });
-}
+    }).catch(function (error) {
+        alert(error)
+});
 
 // Valider le formulaire et enregistrement des données
 
@@ -125,16 +111,11 @@ const validForm = () => {
         order.contact.email = email;
         order.contact.city = city;
         order.contact.address = address;
-        ajaxPost().then(function (orderId) {
-            localStorage.removeItem("adrienR_orinoco_p5")
-            //remove du formulaire
-            //apparition de l'order id en html
-            // un a pour revenir en html
-        }).catch(function (error) {
-            alert(error)
+        sendForm()
         })
+        
 
-    });
+    };
 };
 
 validForm()

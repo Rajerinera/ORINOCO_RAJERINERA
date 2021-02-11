@@ -16,3 +16,25 @@ function ajaxGet(url) {
         });
     })
 }
+
+function ajaxPost () {
+    return new Promise(function (resolve, reject) {
+        let form = new XMLHttpRequest();
+        form.open("POST", "http://localhost:3000/api/teddies/order");
+        form.setRequestHeader("content-type", "application/json");
+        form.send();
+        form.addEventListener("load", function () {
+            if (form.status >= 200 && form.status < 300) {
+                sessionStorage.setItem("orderP5", form.responseText)
+                let resultForm = JSON.parse(form.responseText);
+                console.log(resultForm)
+                resolve(resultForm.orderId);
+
+            } else {
+                console.log("requête erreur: " + form.status)
+                reject("error")
+            }
+        })
+        
+    });
+}
