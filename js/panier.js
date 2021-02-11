@@ -26,12 +26,12 @@ function addCart() {
         th_price.textContent = "Prix"
         th_quantity.textContent = "Quantité"
 
-        for (let i = 0; i < productData.length; i++) {
+        for (let i = 0; i<productData.length; i++) {
             let tr_container = document.createElement('tr')
             let td_name = document.createElement('td')
             let td_price = document.createElement('td')
             let td_quantity = document.createElement('td')
-            
+
 
             table.appendChild(tr_container)
             tr_container.appendChild(td_name)
@@ -43,7 +43,7 @@ function addCart() {
             td_quantity.innerHTML = productData[i].quantity
 
 
-           
+
         }
         let tr_container_total = document.createElement("tr")
         let th_total = document.createElement("th")
@@ -73,14 +73,9 @@ addCart()
 // Boutton pour supprimer le panier
 const button = document.querySelector("#button")
 button.addEventListener("click", removeItem)
-function removeItem(){
-   localStorage.removeItem("adrienR_orinoco_p5")
-   productData=[]
-   table.innerHTML = ""
-}; 
+function removeItem() {
+    localStorage.removeItem("adrienR_orinoco_p5")
+    productData = []
+    table.innerHTML = ""
+};
 
-let allPage = document.getElementById("confirmPage")
-let removePage = document.getElementById("buttonConfirm")
-removePage.addEventListener("click", function(){
-    allPage.remove();
-})
